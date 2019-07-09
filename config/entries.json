@@ -7,5 +7,8 @@
   ],
   "lesson_6": [
     "./src/lesson_6/lesson_6.js"
+  ],
+  "homework_5": [
+    "./src/homework_5/homework_5.js"
   ]
 }
