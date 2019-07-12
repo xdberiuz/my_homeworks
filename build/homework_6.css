@@ -1,0 +1,676 @@
+* {
+  box-sizing: border-box; }
+
+html {
+  font-family: 'SF Pro display' sans-serif;
+  font-family: 'SF Pro display', Arial, Helvetica, sans-serif;
+  font-size: 15px; }
+
+body {
+  max-width: 1400px;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0 auto; }
+
+ul, ol {
+  padding: 0;
+  margin: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0; }
+
+.page-nav {
+  background-color: rgba(45, 45, 45, 0.98);
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  padding: 0 8px; }
+
+.page-nav__menu {
+  display: flex;
+  justify-content: space-between;
+  max-width: 960px;
+  width: 100%;
+  list-style: none; }
+
+.page-nav__link {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.3s all; }
+
+.page-nav__link:hover {
+  color: #888888; }
+
+.page-nav__switcher {
+  background-color: transparent;
+  border: none;
+  height: 20px;
+  width: 20px;
+  outline: none;
+  font-size: 1rem;
+  position: relative; }
+
+.page-nav__switcher:before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: #FFF;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  transition: all 200ms; }
+
+.page-nav__switcher:after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: #FFF;
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  transition: all 200ms; }
+
+.page-nav.opened .page-nav__switcher:before {
+  transform: translateY(5px) rotate(45deg); }
+
+.page-nav.opened .page-nav__switcher:after {
+  transform: translateY(-4px) rotate(-45deg); }
+
+.page-nav__controls {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; }
+
+@media (max-width: 767px) {
+  .page-nav__controls {
+    display: flex; }
+  .page-nav.opened {
+    background-color: black; }
+  .page-nav__menu {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: black;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0 45px;
+    display: flex;
+    visibility: hidden;
+    transition: all 200ms;
+    transform: scaleY(0);
+    transform-origin: top;
+    z-index: 2; }
+  .page-nav.opened .page-nav__menu {
+    visibility: visible;
+    transform: scaleY(1); }
+  .page-nav__link {
+    padding: 15px 0;
+    border-bottom: 1px solid #292929;
+    opacity: 0;
+    transition: opacity 150ms 30ms; }
+  .page-nav.opened .page-nav__link {
+    opacity: 1; } }
+
+/* chapter nav */
+.chapter-nav {
+  width: 100%;
+  height: 120px;
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  vertical-align: middle; }
+
+.chapter-nav__item {
+  margin: 0 2%;
+  height: 95px;
+  width: 60px; }
+
+.chapter-nav__img {
+  background-image: url(./assets/images/iphone-x.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%; }
+
+.chapter-nav__img-eight {
+  background-image: url(./assets/images/iphone8_large.svg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%; }
+
+.chapter-nav__img-se {
+  background-image: url(./assets/images/iphonese_large.svg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%; }
+
+.chapter-nav__img-ios {
+  background-image: url(./assets/images/iphone_ios_large.svg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%; }
+
+.chapter-nav__img-accessories {
+  background-image: url(./assets/images/iphone_acc_large.svg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  margin-left: 3px; }
+
+.chapter-nav__img-comp {
+  background-image: url(./assets/images/iphone_comp_large.svg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%; }
+
+.chapter-nav__text {
+  margin: 0;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.8);
+  text-align: center; }
+
+/* preorder section */
+.preorder {
+  width: 100vw;
+  height: 520px;
+  background-color: #f7f7f7;
+  margin-top: 20px; }
+
+.preorder__head {
+  width: 100vw;
+  height: inherit;
+  margin: 0 auto;
+  padding-top: 70px;
+  font-family: Arial, Helvetica, sans-serif; }
+
+.preorder__head__header-one {
+  text-align: center;
+  font-size: 50px; }
+
+.preorder__head__header-two {
+  text-align: center;
+  font-size: 40px; }
+
+.preorder__head__avalible {
+  display: flex;
+  justify-content: center; }
+
+.avalible {
+  margin: 15px 20px;
+  color: #888888;
+  font-size: 16px; }
+
+.preorder__head__link {
+  display: flex;
+  justify-content: center;
+  position: relative; }
+
+.ph_link {
+  color: #0070c9;
+  text-decoration: none;
+  font-size: 25px; }
+
+.ph_link::after {
+  content: '>';
+  position: absolute;
+  top: 8%;
+  left: 61%; }
+
+.preorder__img {
+  background-image: url(./assets/images/iphone_x_medium_2x.jpg);
+  background-size: 649px 136px;
+  width: 649px;
+  height: 136px;
+  margin: 80px auto 0; }
+
+.section-two {
+  background-color: #f9f0eb;
+  height: 643px; }
+
+.phone-eight {
+  background-image: url(./assets/images/iphone_8_medium_2x.jpg);
+  background-size: 476px 383px;
+  width: 476px;
+  height: 383px;
+  margin: 10px auto; }
+
+@media (max-width: 767px) {
+  .preorder {
+    height: 460px; }
+  .preorder__img {
+    background-image: url(./assets/images/iphone_x_small_2x.jpg);
+    background-size: 336px 71px;
+    width: 336px;
+    height: 71px; }
+  .section-two {
+    height: 590px; }
+  .phone-eight {
+    background-image: url(./assets/images/iphone_8_small_2x.jpg);
+    background-size: 321px 229px;
+    width: 321px;
+    height: 229px; } }
+
+/* section better */
+.section-better {
+  width: 735px;
+  height: 589px;
+  margin: 20px auto;
+  background-color: #fafafa;
+  border-radius: 10px; }
+
+.section-better__content {
+  width: 295px;
+  height: 240px;
+  margin: 10px auto;
+  padding: 0 35px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative; }
+
+.section-better__header {
+  font-size: 50px;
+  text-align: center; }
+
+.section-better__link {
+  margin: 10px auto;
+  color: #0070c9;
+  text-decoration: none;
+  font-size: 25px; }
+
+.section-better__link::after {
+  content: '>';
+  position: absolute;
+  top: 79%;
+  left: 78%;
+  font-size: 20px; }
+
+.section-better__img {
+  background-image: url(./assets/images/compare_medium_2x.jpg);
+  background-size: 476px 349px;
+  width: 476px;
+  height: 349px;
+  margin: 0 auto; }
+
+/* section better two */
+.content-two {
+  height: 940px; }
+
+.section-second {
+  width: 334px;
+  height: 425px;
+  padding: 0; }
+
+.section-better__text {
+  text-align: center;
+  font-size: 19px;
+  font-family: 'SF Pro display', Arial, Helvetica, sans-serif; }
+
+.section-better__link-two {
+  margin: 10px auto;
+  color: #0070c9;
+  text-decoration: none;
+  font-size: 25px; }
+
+.header-two {
+  font-size: 49px; }
+
+.section-better__link-two::after {
+  content: '>';
+  position: absolute;
+  top: 75%;
+  left: 74%;
+  font-size: 20px; }
+
+.section-better__preorder {
+  color: #888888;
+  font-size: 19px;
+  display: flex;
+  justify-content: center;
+  margin: 5px 0; }
+
+.section-better_img-two {
+  background-image: url(./assets/images/ios_medium_2x.jpg);
+  background-size: 577px 484px;
+  width: 577px;
+  height: 484px;
+  margin: 31px auto; }
+
+/* phones */
+@media (max-width: 767px) {
+  .section-better {
+    width: 328px;
+    position: relative; }
+  .section-better__img {
+    background-image: url(./assets/images/compare_small_2x.jpg);
+    background-size: 303px 275px;
+    width: 303px;
+    height: 275px;
+    position: absolute;
+    bottom: 0;
+    left: 5%; }
+  .section-better_img-two {
+    background-image: url(./assets/images/ios_small_2x.jpg);
+    background-size: 322px 291px;
+    width: 322px;
+    height: 291px;
+    position: absolute;
+    bottom: 0;
+    left: 1%;
+    margin: 0; } }
+
+/* accessories */
+.section-acc {
+  width: 735px;
+  height: 300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center; }
+
+.section-acc__content {
+  width: 355px;
+  height: inherit;
+  background-color: #fafafa;
+  position: relative; }
+
+.margin {
+  margin-right: 25px; }
+
+.section-acc__sheader {
+  margin: 35px 0 0 0;
+  font-size: 25px;
+  text-align: center; }
+
+.section-acc__header {
+  padding: 0 32px;
+  font-size: 35px;
+  line-height: 1.1;
+  text-align: center;
+  position: relative;
+  z-index: 2; }
+
+.section-acc__link {
+  color: #0070c9;
+  text-decoration: none;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2; }
+
+.section-acc__img {
+  background-image: url(./assets/images/airpods_medium_2x.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 207px; }
+
+.section-acc__img-two {
+  background-image: url(./assets/images/accessories_medium_2x.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 50%;
+  position: absolute; }
+
+/* tablets */
+@media (max-width: 900px) {
+  .section-acc {
+    display: block;
+    height: 820px;
+    margin: 0 auto; }
+  .section-acc__content {
+    width: 735px;
+    height: 400px; }
+  .section-acc__img {
+    width: 100%;
+    height: 60%;
+    position: absolute;
+    top: 160px; }
+  .section-acc__cont {
+    padding: 30px 0 0 0; }
+  .section-acc__img-two {
+    width: 100%;
+    height: 75%;
+    bottom: 0%;
+    position: absolute; }
+  .margin {
+    margin: 0 0 20px 0; } }
+
+/* phones */
+@media (max-width: 767px) {
+  .section-acc {
+    width: 100vw;
+    height: 1120px;
+    margin: 0 auto; }
+  .section-acc__content {
+    width: 328px;
+    height: 551px;
+    margin: 0 auto;
+    position: relative; }
+  .margin {
+    margin: 0 auto 20px; }
+  .section-acc__cont {
+    padding: 0; }
+  .section-acc__sheader {
+    margin: 15px 0 0 0;
+    padding: 30px 0 0 0; }
+  .section-acc__img {
+    background-image: url(./assets/images/airpods_small_2x.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    top: 65%;
+    height: 35%; }
+  .section-acc__img-two {
+    background-image: url(./assets/images/accessories_small_2x.jpg);
+    background-position: center; } }
+
+/* section compare */
+.section-compare {
+  background-image: url(./assets/images/howtoshoot_medium_2x.jpg);
+  background-size: cover;
+  margin: 75px auto 0;
+  width: 735px;
+  height: 520px;
+  position: relative; }
+
+.section-compare__content {
+  position: absolute;
+  top: 160px;
+  left: 18%; }
+
+.section-compare__header {
+  color: #fff;
+  font-size: 65px;
+  text-align: center; }
+
+.section-compare__link {
+  color: #0070c9;
+  text-decoration: none;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  padding: 15px 0 0 0; }
+
+/* tables */
+@media (max-width: 900px) {
+  .section-compare {
+    margin: 20px auto 0; } }
+
+/* phones */
+@media (max-width: 767px) {
+  .section-compare {
+    background-image: url(./assets/images/howtoshoot_small_2x.jpg);
+    background-position: center;
+    width: 328px;
+    height: 570px; }
+  .section-compare__content {
+    top: 20%;
+    left: 1%; } }
+
+/* section pay and iCloud */
+.section-pay {
+  width: 750px;
+  height: 800px;
+  margin: 20px auto 0;
+  display: flex;
+  justify-content: center; }
+
+.section-pay__block {
+  width: 350px;
+  height: inherit;
+  background-color: #fafafa;
+  position: relative; }
+
+.section-pay__content {
+  margin: 70px 0 0 0;
+  padding: 10px; }
+
+.section-pay__sheader {
+  font-size: 25px;
+  text-align: center; }
+
+.section-pay__header {
+  font-size: 40px;
+  text-align: center; }
+
+.section-pay__text {
+  text-align: center;
+  color: #111;
+  font-size: 20px; }
+
+.section-pay__link {
+  color: #0070c9;
+  text-decoration: none;
+  font-size: 20px;
+  display: flex;
+  justify-content: center; }
+
+.section-pay__img {
+  background-image: url(./assets/images/apple_pay_medium_2x.jpg);
+  background-size: cover;
+  background-position: center;
+  margin: 25px 0 0 0;
+  width: 100%;
+  height: 40%; }
+
+.mf {
+  margin-right: 35px; }
+
+.section-pay__img-two {
+  background-image: url(./assets/images/icloud_medium_2x.jpg);
+  background-size: cover;
+  width: 90%;
+  position: absolute;
+  height: 21%;
+  bottom: 5%;
+  left: 7%; }
+
+/* tablets */
+@media (max-width: 900px) {
+  .section-pay {
+    display: block;
+    height: 1620px; }
+  .section-pay__block {
+    width: 735px;
+    height: 800px; }
+  .section-pay__content {
+    margin: 20px 0 0 0;
+    padding: 80px; }
+  .section-pay__img {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    bottom: 0; }
+  .section-pay__img-two {
+    background-size: cover;
+    width: 100%;
+    position: absolute;
+    height: 50%;
+    bottom: 0;
+    left: 0; } }
+
+/* phones */
+@media (max-width: 767px) {
+  .section-pay {
+    width: 100vw;
+    height: 1680px; }
+  .section-pay__block {
+    height: 830px; }
+  .section-pay__content {
+    padding: 35px 0 0 0; }
+  .section-pay__block {
+    width: 328px;
+    margin: 0 auto; }
+  .mf {
+    margin: 0 auto; }
+  .section-pay__img {
+    background-image: url(./assets/images/apple_pay_small_2x.jpg); }
+  .section-pay__img-two {
+    background-image: url(./assets/images/icloud_small_2x.jpg);
+    height: 22%;
+    bottom: 15%; } }
+
+/* footer */
+.footer {
+  margin: 25px 0 0 0;
+  width: 100vw;
+  height: 200px;
+  background-color: #f2f2f2;
+  position: relative; }
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  padding: 5% 0 0 0; }
+
+.footer__links {
+  color: #555555;
+  text-decoration: none;
+  padding: 0 10px;
+  border-right: 1px solid #d6d6d6; }
+
+.bn {
+  border-right: none; }
+
+.footer-sheader {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: inherit;
+  height: 110px; }
+
+.footer-rights {
+  font-weight: normal;
+  color: #9b9b9b;
+  font-size: 15px;
+  position: absolute;
+  bottom: 5%; }
+
+@media (max-width: 767px) {
+  .footer-nav {
+    display: none; } }
+
+
+/*# sourceMappingURL=homework_6.css.map*/
