@@ -1,0 +1,15 @@
+$ls: 1056px;
+$tb: 791px;
+$ph: 481px;
+
+@mixin low-screen {
+    @media (max-width: $ls - 1px ) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: $tb - 1px) {
+        @content;
+    }
+}

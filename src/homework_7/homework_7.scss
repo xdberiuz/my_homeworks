@@ -1,0 +1,587 @@
+@import './style/_mixins.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fc;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    width: 100vw;
+    height: 100vh;
+    background-color: #313a5a;
+    padding: 0 90px;
+    position: relative;
+    &__nav-bar {
+        display: flex;
+    }
+    &__logo {
+        display: flex;
+        justify-content: flex-start;
+        flex-grow: 2;
+        line-height: 110px;
+        color: #FFF;
+        font-size: 26px;
+    }
+    &__nav {
+        flex-grow: 1;
+    }
+    &__login {
+        display: flex;
+        flex-grow: 2;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    &__content {
+        width: 555px;
+        margin: 140px 0 0 0;
+        color: #FFF;
+        @include low-screen {
+            width: 400px;
+        }
+        @include tablet{
+            width: 400px;
+            margin: 100px auto 0;
+            text-align: center;
+        }
+    }
+    &__title {
+        font-size: 48px;
+        font-weight: 400;
+        @include tablet {
+            font-size: 30px;
+        }
+    }
+    &__text {
+        font-size: 16px;
+        font-weight: 100;
+        line-height: 2;
+        @include tablet {
+           font-size: 15px;
+        }
+    }
+    &__btn {
+        height: 40px;
+        padding: 0 30px;
+        border: none;
+        border-top-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
+        background-color: #1fdb84;
+        font-size: 16px;
+        color: #FFF;
+        cursor: pointer;
+        transition: 0.3s all;
+        @include tablet {
+            margin: 50px;
+            padding: 0;
+            width: 220px;
+            height: 60px;
+            font-size: 20px;
+        }
+    }
+    &__btn:hover {
+        transform: scale(1.1);
+    }
+    &__img {
+        background-image: url(../../assets/images/homework_7/logo.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 40%;
+        height: 75%;
+        position: absolute;
+        right: 0;
+        bottom: 5%;
+        @include tablet {
+            display: none;
+        }
+    }
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-around;
+    line-height: 110px;
+    &__links {
+        list-style: none;
+    }
+    &__link {
+        text-decoration: none;
+        color: #FFF;
+        font-size: 16px;
+        transition: 0.3s all;
+    }
+    &__link:hover {
+        color: #1fdb84;
+    }
+}
+
+.btn {
+    &__login {
+        height: 20px;
+        border: none;
+        background-color: transparent;
+        color: #FFF;
+        font-size: 16px;
+        margin: 0 20px;
+        cursor: pointer;
+        transition: 0.3s all;
+    }
+    &__login:hover {
+        color: #1fdb84;
+    }
+    &__register {
+        height: 40px;
+        padding: 0 30px;
+        border: none;
+        border-top-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
+        background-color: #1fdb84;
+        font-size: 16px;
+        color: #FFF;
+        cursor: pointer;
+        transition: 0.3s all;
+    }
+    &__register:hover {
+        transform: scale(1.1);
+    }
+}
+
+.section {
+    width: 90%;
+    height: 400px;
+    margin: 0 auto;
+    padding: 60px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 10px 34px 0 rgba(210, 210, 210, 0.5);
+    position: relative;
+    bottom: 145px;
+    display: flex;
+    justify-content: space-around;
+    @include tablet {
+        flex-direction: row-reverse;
+    }
+    @include low-screen {
+        height: 320px;
+        padding: 35px;
+    }
+    &__about {
+        width: 300px;
+    }
+    &__img {
+        width: 70px;
+        height: 70px;
+        border-radius: 6px;
+        background-color: hsla(152, 75%, 49%, 0.13);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__img1 {
+        background-image: url(../../assets/images/homework_7/shape_3.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 35px;
+    }
+    &__img2 {
+        background-image: url(../../assets/images/homework_7/shape_2.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 35px;
+    }
+    &__img3 {
+        background-image: url(../../assets/images/homework_7/shape.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 40px;
+        height: 30px;
+    }
+    &__title {
+        font-size: 18px;
+        @include low-screen {
+            font-size: 15px;
+        }
+    }
+    &__line {
+        width: 60px;
+        height: 4px;
+        background-color: #1fdb84;
+    }
+    &__text {
+        font-size: 16px;
+        line-height: 2;
+        @include low-screen {
+            font-size: 15px;
+            line-height: 1.5;
+        }
+    }
+}
+
+.pricing {
+    &__content{
+        width: 810px;
+        height: 290px;
+        margin: 0 auto;
+        @include tablet {
+            width: 100vw;
+        }
+    }
+    &__title {
+        color: #32325c;
+        font-size: 38px;
+        text-align: center;
+        font-weight: 100;
+        line-height: 1.6;
+        @include low-screen {
+            font-size: 30px;
+        }
+        @include tablet {
+            font-size: 25px;
+        }
+    }
+    &__btns {
+        margin: 60px 0 0 0;
+        display: flex;
+        justify-content: center;
+    }
+    &__btn {
+        width: 160px;
+        height: 60px;
+        border-radius: 5px;
+        border: solid 1px #aefdd9;
+        background-color: #ffffff;
+        color: #1fdb84;
+        font-size: 16px;
+        cursor: pointer;
+        @include tablet {
+            width: 140px;
+            height: 40px;
+            font-size: 15px;
+        }
+        &_free {
+            width: 470px;
+            font-size: 16px;
+            color: #1fdb84;
+            letter-spacing: 2px;
+            background-color: #f8f9fc;
+            border-radius: 5px;
+            border: solid 1px #aefdd9;
+            cursor: pointer;
+            @include tablet {
+                width: 300px;
+                font-size: 15px;
+            }
+        }
+    }
+    &__cards {
+        display: flex;
+        justify-content: center;
+        @include tablet {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+.card {
+    width: 380px;
+    height: 665px;
+    position: relative;
+    transition: 0.3ms all;
+    @include tablet {
+        background-color: #fff;
+        border-top: 3px solid #0a8aff;
+    }
+    &__title {
+        font-size: 24px;
+        padding: 50px 0 0 10px;
+        color: #32325c;
+        letter-spacing: 0.27px;
+        text-align: center;
+        margin: 0;
+        @include low-screen {
+            font-size: 20px;
+        }
+    }
+    &__price {
+        font-size: 72px;
+        color: #1fdb84;
+        text-align: center;
+        margin: 30px 0 0 0;
+        @include low-screen {
+            font-size: 60px;
+        }
+    }
+    &__month {
+        font-size: 16px;
+        color: #5b6c94;
+        text-align: center;
+        margin: 15px 0 0 0;
+        @include low-screen {
+            font-size: 15px;
+        }
+    }
+    &__benefits {
+        margin: 60px 0 0 0;
+        padding: 0;
+        text-align: center;
+    }
+    &__benefit {
+        list-style: none;
+        line-height: 3;
+        color: #5b6c94;
+        font-size: 16px;
+        @include low-screen {
+            font-size: 15px;
+        }
+    }
+    &__btn {
+        width: 250px;
+        height: 60px;
+        margin: 0 auto;
+        padding: 0 30px;
+        border: none;
+        border-top-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
+        background-color: #1fdb84;
+        font-size: 16px;
+        letter-spacing: 1px;
+        color: #FFF;
+        cursor: pointer;
+        transition: 0.3s all;
+        position: absolute;
+        bottom: 60px;
+        left: calc(50% - 125px);
+        @include low-screen {
+            width: 220px;
+            font-size: 15px;
+            left: calc(50% - 110px);
+        }
+    }
+    &__btn:hover {
+        transform: scale(1.1);
+    }
+}
+
+.card:hover {
+    background-color: #fff;
+    border-top: 3px solid #0a8aff;
+}
+
+.comment {
+    &__section {
+        width: 100vw;
+        margin: 250px 0 0 0;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        @include tablet {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &__block {
+        width: 830px;
+        height: 910px;
+        background-color: #313a5a;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        @include low-screen {
+            width: 700px;
+        }
+        @include tablet {
+            width: 600px;
+            height: 600px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    &__say {
+        width: 380px;
+        height: 413px;
+        margin: 50px 0;
+        position: relative;
+    }
+    &__header {
+        font-size: 40px;
+        padding: 40px 0 0 25px;
+        color: #031d5b;
+        font-weight: 100;
+        line-height: 1.2;
+    }
+    &__img {
+        background-image: url(../../assets/images/homework_7/rectangle-7-copy-6.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+    }
+    &__img2 {
+        background-image: url(../../assets/images/homework_7/rectangle-7-copy-6.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    &__content_one {
+        width: 420px;
+        height: 500px;
+        background-color: #1fdb84;
+        padding: 80px 60px 60px 50px;
+        border-radius: 6px;
+        position: absolute;
+        left: -10%;
+        @include low-screen {
+            width: 350px;
+        }
+        @include tablet {
+            height: 400px;
+            position: relative;
+            left: 0;
+            padding: 40px;
+        }
+    }
+    &__content_two {
+        width: 420px;
+        height: 500px;
+        background-color: #FFF;
+        padding: 80px 60px 60px 50px;
+        border-radius: 6px;
+        position: absolute;
+        left: 45%;
+        @include low-screen {
+            width: 350px;
+        }
+        @include tablet {
+            display: none;
+        }
+    }
+    &__text {
+        font-size: 18px;
+        line-height: 2;
+        font-weight: 100;
+        color: #000000;
+    }
+    &__author {
+        color: #000000;
+        font-size: 18px;
+        line-height: 2;
+        position: absolute;
+        bottom: 60px;
+        @include tablet {
+            bottom: 0;   
+        }
+    }
+    &__sliders {
+        position: absolute;
+        bottom: 5%;
+        left: 10%;
+        display: flex;
+        @include tablet {
+            left: calc(50% - 75px);
+        }
+    }
+    &__slider {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        margin: 5px;
+        cursor: pointer;
+        &_checked {
+            background-color: #fff;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            margin: 5px;
+        }
+    }
+}
+
+
+.platform {
+    &__section {
+        width: 100vw;
+        height: 100px;
+        margin: 200px 0 0 0;
+    }
+    &__img {
+        background-image: url(../../assets/images/homework_7/tms.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 55%;
+        height: 35%;
+        margin: 0 auto;
+    }
+    &__title {
+        font-size: 16px;
+        color: #031d5b;
+        text-align: center;
+        padding: 30px;
+    }
+}
+
+.footer {
+    width: 100vw;
+    height: 150px;
+    margin: 180px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__rights {
+        font-size: 16px;
+        color: #5b6c94;
+    }
+    &__nav {
+        margin: 50px 0 0 0;
+    }
+    &__links {
+        display: flex;
+        justify-content: center;
+    }
+    &__items {
+        list-style: none;
+    }
+    &__link {
+        text-decoration: none;
+        font-size: 16px;
+        color: #5b6c94;
+    }
+    &__items:after {
+        content: '/';
+        margin: 0 30px;
+        color: #5b6c94;
+    }
+    &__items:last-child::after {
+        display: none;
+    }
+}
