@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #364687; }
+
+.light__block {
+  width: 300px;
+  height: 630px;
+  margin: 0 auto;
+  border: 5px solid grey;
+  border-radius: 30px;
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 50px #464444; }
+
+.light {
+  width: 180px;
+  height: 180px;
+  border: 3px solid grey;
+  border-radius: 50%;
+  margin: 10px 0;
+  background-color: #464444; }
+
+.btn__block {
+  width: 100vw;
+  height: 100px;
+  margin: 50px 0;
+  text-align: center; }
+
+.btn {
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+  border: 2px solid grey;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.2s all; }
+
+.btn:hover {
+  transform: scale(1.1); }
+
+.red {
+  background-color: red;
+  transition: 0.3s all;
+  box-shadow: 0 0 120px red; }
+
+.orange {
+  background-color: orange;
+  transition: 0.3s all;
+  box-shadow: 0 0 120px #ff9100; }
+
+.green {
+  background-color: green;
+  transition: 0.3s all;
+  box-shadow: 0 0 120px #32ff00; }
+
+@media (max-width: 760px) {
+  .light__block {
+    width: 200px;
+    height: 420px;
+    margin: 0 auto;
+    border: 3px solid grey;
+    border-radius: 30px;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 50px #464444; }
+  .light {
+    width: 120px;
+    height: 120px;
+    border: 2px solid grey;
+    border-radius: 50%;
+    margin: 3px 0;
+    background-color: #464444; }
+  .red {
+    background-color: red;
+    transition: 0.3s all;
+    box-shadow: 0 0 80px red; }
+  .orange {
+    background-color: orange;
+    transition: 0.3s all;
+    box-shadow: 0 0 80px #ff9100; }
+  .green {
+    background-color: green;
+    transition: 0.3s all;
+    box-shadow: 0 0 80px #32ff00; }
+  .btn {
+    margin: 0; } }
+
+
+/*# sourceMappingURL=homework_8.css.map*/

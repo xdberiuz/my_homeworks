@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="http://localhost:35729/livereload.js"></script>
+  <title key='title'></title>
+<link href="homework_8.css" rel="stylesheet"></head>
+
+<body>
+  <div class="light__block">
+    <div class="light three"></div>
+    <div class="light two"></div>
+    <div class="light one"></div>
+  </div>
+  <div class="btn__block">
+    <button onclick="colorGreen()" class="btn" id="btn1">Green</button>
+    <button onclick="colorOrnge()" class="btn" id="btn2">Orange</button>
+    <button onclick="colorRed()" class="btn" id="btn3">Red</button>
+  </div>
+  <script>
+    function colorGreen() {
+      const btnOne = document.querySelector('#btn1');
+      const bcGreen = document.querySelector('.one');
+      const bcOrange = document.querySelector('.two');
+      const bcRed = document.querySelector('.three');
+      bcGreen.classList.add('green');
+      bcOrange.classList.remove('orange');
+      bcRed.classList.remove('red');
+    };
+    function colorOrnge() {
+      const btnTwo = document.querySelector('#btn2');
+      const bcOrange = document.querySelector('.two');
+      const bcGreen = document.querySelector('.one');
+      const bcRed = document.querySelector('.three');
+      bcOrange.classList.add('orange');
+      bcGreen.classList.remove('green');
+      bcRed.classList.remove('red');
+    };
+    function colorRed() {
+      const btnThee = document.querySelector('#btn3');
+      const bcRed = document.querySelector('.three');
+      const bcGreen = document.querySelector('.one')
+      const bcOrange = document.querySelector('.two');
+      bcRed.classList.add('red');
+      bcOrange.classList.remove('orange');
+      bcGreen.classList.remove('green');
+    }
+  </script>
+<script type="text/javascript" src="homework_8.js"></script></body>
+
+</html>
