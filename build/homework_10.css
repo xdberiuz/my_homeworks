@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif; }
+
+p {
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0; }
+
+.window {
+  visibility: hidden; }
+
+.window__block {
+  visibility: hidden;
+  position: absolute; }
+
+.window.active {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+  opacity: 0.8;
+  position: absolute;
+  visibility: visible;
+  transition: 0.1s all;
+  z-index: 1; }
+
+.window__block.active {
+  margin: 0;
+  width: 600px;
+  height: 550px;
+  background-color: #fff;
+  border: 3px solid #000;
+  border-radius: 20px;
+  position: absolute;
+  left: calc(50% - 300px);
+  z-index: 1;
+  opacity: 1;
+  transform: translateY(30%);
+  transition: 0.3s all;
+  visibility: visible;
+  transition: 0.3s all;
+  z-index: 1; }
+
+.window__title {
+  text-align: center;
+  font-size: 35px;
+  margin: 50px 0 0 0; }
+
+.headline {
+  width: 300px;
+  height: 50px;
+  position: relative;
+  left: calc(50% - 150px);
+  margin: 20px 0 0 0;
+  border: 1px solid #000;
+  border-radius: 5px;
+  font-size: 20px;
+  text-align: center;
+  background-color: #fff; }
+
+textarea {
+  width: 500px;
+  height: 200px;
+  position: relative;
+  left: calc(50% - 250px);
+  margin: 10px 0 0 0;
+  border: 1px solid #000;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 10px;
+  background-color: #fff; }
+
+.send {
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+  border: 1px solid #000;
+  border-radius: 30px;
+  position: absolute;
+  left: calc(50% - 100px);
+  bottom: 3%;
+  cursor: pointer; }
+
+h1 {
+  text-align: center;
+  padding: 10px;
+  color: #fff; }
+
+p {
+  color: #fff;
+  font-size: 20px;
+  padding: 20px;
+  text-indent: 30px; }
+
+.user__message {
+  width: 800px;
+  margin: 0 auto;
+  background-color: grey;
+  border-radius: 20px; }
+
+.main__button {
+  display: block;
+  width: 140px;
+  height: 50px;
+  border: 3px solid #000;
+  border-radius: 25px;
+  font-size: 15px;
+  color: #000;
+  background-color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  top: 10px;
+  left: 7%;
+  z-index: 0; }
+
+
+/*# sourceMappingURL=homework_10.css.map*/
