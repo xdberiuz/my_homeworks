@@ -22,5 +22,8 @@
   ],
   "homework_10": [
     "./src/homework_10/homework_10.js"
+  ],
+  "homework_13": [
+    "./src/homework_13/homework_13.js"
   ]
 }
